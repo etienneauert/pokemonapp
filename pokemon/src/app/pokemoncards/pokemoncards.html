@@ -1,1 +1,10 @@
-<p>pokemoncards wodfsgdfsgsdfrks!</p>
+<div class="outerborder">
+    <div class="pokemon-grid">
+        @for (pokemon of pokemons; track pokemon.name) {
+            <div class="pokemon-card">
+                <img [src]="pokemon.image" [alt]="pokemon.name" class="pokemon-image">
+                <h3>{{ pokemon.name }}</h3>
+            </div>
+        }
+    </div>
+</div>
