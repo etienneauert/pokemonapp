@@ -14,7 +14,7 @@ export const routes: Routes = [
         component:Pokemoncards
     },
     {
-        path: 'pokemondetail',
+        path: 'pokemondetail/:name',
         component: Pokemondetail
     }
 ];

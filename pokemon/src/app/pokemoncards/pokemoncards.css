@@ -13,7 +13,7 @@
 .pokemon-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 40px;
     width: 100%;
 }
 
@@ -21,16 +21,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     padding: 15px;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
+
 .pokemon-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    z-index: 10;
 }
+
 
 .pokemon-image {
     width: 120px;
@@ -226,3 +229,6 @@
     }
 }
 
+.mew-Deoxys{
+    background-color: #ff6380;
+}
