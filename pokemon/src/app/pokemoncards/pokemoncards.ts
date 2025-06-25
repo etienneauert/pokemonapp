@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
 })
 export class Pokemoncards {
   pokemons = [
-    { name: 'Mew', image: '/PokemonBilder/Mew_Bild.png', audio: '/PokemonAudio/Mew_Audio.mp3', class: 'Mew-Deoxys' },
+    { name: 'Mew', image: '/PokemonBilder/Mew_Bild.png', audio: '/PokemonAudio/Mew_Audio.mp3', class: 'Mew-Deoxys', typ: 'Psycho', pokedex: '151', farbe: 'rosa', kategorie: 'Neue Art-Pokémon', größe: '0,4m', gewicht: '4,0 Kg' },
     { name: 'Celebi', image: '/PokemonBilder/Celebi_Bild.png', audio: '/PokemonAudio/Celebi_Audio.mp3' },
     { name: 'Deoxys', image: '/PokemonBilder/Deoxys/Deoxys_Bild.png', audio: '/PokemonAudio/Deoxys_Audio.mp3', class: 'Mew-Deoxys' },
     { name: 'Jirachi', image: '/PokemonBilder/Jirachi_Bild.png', audio: '/PokemonAudio/Jirachi_Audio.mp3' },
