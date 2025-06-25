@@ -25,6 +25,14 @@
                     <button class="play-sound-button" (click)="playSound()">
                         🔊 Sound abspielen
                     </button>
+                    <!--<button class="mehr-infos-button" (click)="mehrinfos()">
+                        Mehr Infos
+                    </button> -->
+                    <a [routerLink]="['/pokemondetail']">
+                        <button class="mehr-infos-button">
+                            Mehr Infos
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
