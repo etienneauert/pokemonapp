@@ -1,10 +1,32 @@
 <div class="outerborder">
     <div class="pokemon-grid">
         @for (pokemon of pokemons; track pokemon.name) {
-            <div class="pokemon-card">
+            <div class="pokemon-card" (click)="onPokemonClick(pokemon.name)">
                 <img [src]="pokemon.image" [alt]="pokemon.name" class="pokemon-image">
                 <h3>{{ pokemon.name }}</h3>
             </div>
         }
     </div>
 </div>
+
+
+
+<!-- Modal Pop-up -->
+@if (showModal && selectedPokemon) {
+    <div class="modal-overlay" (click)="closeModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <button class="close-button" (click)="closeModal()">×</button>
+            
+            <div class="modal-body">
+                <img [src]="selectedPokemon.image" [alt]="selectedPokemon.name" class="modal-pokemon-image">
+                
+                <div class="modal-info">
+                    <h2>{{ selectedPokemon.name }}</h2>
+                    <button class="play-sound-button" (click)="playSound()">
+                        🔊 Sound abspielen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
