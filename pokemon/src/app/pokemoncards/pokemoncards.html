@@ -14,7 +14,7 @@
 <!-- Modal Pop-up -->
 @if (showModal && selectedPokemon) {
     <div class="modal-overlay" (click)="closeModal()">
-        <div class="modal-content" (click)="$event.stopPropagation()">
+        <div [class]="selectedPokemon.style" (click)="$event.stopPropagation()">
             <button class="close-button" (click)="closeModal()">×</button>
             
             <div class="modal-body">
@@ -30,7 +30,7 @@
                     </button> -->
                     <a [routerLink]="['/pokemondetail']">
                         <button class="mehr-info-button">
-                            𝓲 Mehr Infos
+                            𝓲Mehr Infos
                         </button>
                     </a>
                 </div>
