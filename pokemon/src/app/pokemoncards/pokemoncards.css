@@ -129,8 +129,8 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.play-sound-button {
-    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+.play-sound-button, .mehr-info-button {
+    background: linear-gradient(45deg, #ff2400, #8800ff);
     color: white;
     border: none;
     padding: 15px 25px;
@@ -139,10 +139,32 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 10px;
 }
 
-.play-sound-button:hover {
+.play-sound-button:hover, .mehr-info-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+@media (min-width: 768px) {
+    .modal-body {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .modal-pokemon-image {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+    
+    .modal-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.mew-Deoxys{
+    background-color: #ff6380;
+}
