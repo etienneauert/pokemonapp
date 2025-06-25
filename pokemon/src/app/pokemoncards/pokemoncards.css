@@ -146,20 +146,3 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 768px) {
-    .modal-body {
-        flex-direction: row;
-        text-align: left;
-    }
-    
-    .modal-pokemon-image {
-        margin-right: 30px;
-        margin-bottom: 0;
-    }
-    
-    .modal-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
