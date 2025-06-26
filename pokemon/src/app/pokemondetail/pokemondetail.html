@@ -1,6 +1,6 @@
 <div class="pokemon-detail-container">
     @if (selectedPokemon) {
-        <div class="pokemon-detail-card">
+        <div [class]="selectedPokemon.style" >
             <button class="back-button" (click)="goBack()">← Zurück</button>
             
             <div class="pokemon-detail-content">
@@ -45,6 +45,9 @@
                             <span class="info-value">{{ selectedPokemon.weight || 'Unbekannt' }}</span>
                         </div>
                     </div>
+                        <div class="pokemon-description">
+                            <p [innerHTML]="selectedPokemon.info || 'Keine weiteren Informationen verfügbar.'"></p>
+                        </div>
                 </div>
             </div>
         </div>
