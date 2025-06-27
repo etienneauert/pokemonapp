@@ -1,0 +1,26 @@
+<div class="audibutton">
+    <button id="button" (click)="openPopup()">Dentron Depnex</button>
+</div>
+
+<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <div class="popup-header">
+            <h1>Dentron Depnex</h1>
+            <button class="close-btn" (click)="closePopup()">×</button>
+        </div>
+        <div class="popup-content">
+            <img src="/PokemonBilder/Dentron.JPG" alt="">
+
+            <div id="stats">
+                <div id="Beschreibung">
+                    <h2>Beschreibung</h2>
+                    <p>Dentron lebt in einem Raum, den Forscher als „archäologische Herausforderung“ bezeichnen. Überall liegen Klamotten, halbleere Flaschen, leere Chipstüten und mindestens drei vergessene Löffel. Niemand weiß, warum – nicht mal Denigma selbst.
+
+                    Es ist chronisch müde. Selbst nach 12 Stunden Schlaf murmelt es nur ein kraftloses „Ich glaub, ich leg mich gleich wieder hin.“ Man hat es einmal mit einem Kissen unterm Arm beim Einkaufen gesehen.</p>
+                    <h2>Seine Spezialfähigkeit:</h2>
+                    <p>Bekannt ist Dentron außerdem für seine geheime Spezialfähigkeit: Kleptosense – es kann in einem Raum stehen und Dinge verschwinden einfach. Fernbedienungen, Kopfhörer und sogar einzelne Socken</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

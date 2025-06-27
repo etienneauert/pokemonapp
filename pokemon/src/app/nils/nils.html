@@ -1,0 +1,28 @@
+<div class="audibutton">
+    <button id="button" (click)="openPopup()">Kaanado Cerion</button>
+</div>
+
+<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <div class="popup-header">
+            <h1>Kaanado Cerion</h1>
+            <button class="close-btn" (click)="closePopup()">×</button>
+        </div>
+        <div class="popup-content">
+            <img src="/PokemonBilder/kaanado.JPG" alt="">
+
+            <div id="stats">
+                <div id="Beschreibung">
+                    <h2>Beschreibung</h2>
+                    <p>Kaanado ist so müde, dass es beim Gähnen manchmal selbst vergisst, warum es gegähnt hat. Es verbringt durchschnittlich 23,9 Stunden pro Tag im Liegen – die restlichen 0,1 Stunden murmelt es Dinge wie:
+
+„Joa… pfff… später vielleicht…“
+
+Wird es in einen Kampf gerufen, reagiert Kaanado meistens mit einem genervten Stöhnen und dreht sich demonstrativ auf die andere Seite. Laut Forschern besitzt es durchaus mächtige Fähigkeiten – es ist nur zu unfassbar müde, sie jemals einzusetzen.</p>
+                    <h2>Seine Spezialfähigkeit:</h2>
+                    <p>Bei jeder Runde besteht eine 80 % Chance, dass Kaanado einfach nichts tut. Stattdessen gähnt es, rollt sich auf die andere Seite oder fängt an, leise „Mhhh“ zu machen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
