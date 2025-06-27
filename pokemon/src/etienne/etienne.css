@@ -8,7 +8,7 @@
     padding: 15px 30px 15px 30px;
     border-radius: 8px;
     border:1px solid rgb(107, 91, 0);
-    background-color: #ffef09;
+    background-color: #32ff09;
     font-weight: 600;
     font-size: 25px;
     cursor: pointer;
@@ -37,7 +37,7 @@
 }
 
 .popup-container {
-  background: #ffef09;
+  background: #32ff09;
   width: 900px;
   height: 650px;
   border-radius: 10px;
@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   padding: 19px;
-  border-bottom: 1px solid #ffef09;
+  border-bottom: 1px solid #eee;
   align-items: center;
   font-size: 19px;
   
@@ -76,7 +76,7 @@
 .popup-content {
   padding: 20px;
   height: calc(100% - 80px);
-  background-color: #ffef09;
+  background-color: #32ff09;
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@
 #popup {
   width: 600px;
   height: 700px;
-  background-color: #ffef09;
+  background-color: #32ff09;
   border: 2px dashed #ccc;
   display: flex;
   align-items: center;
