@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './pokemoncards.html',
   styleUrl: './pokemoncards.css'
 })
+
 export class Pokemoncards {
   pokemons = [
     { name: 'Mew', image: '/PokemonBilder/Mew_Bild.png', audio: '/PokemonAudio/Mew_Audio.mp3', style: 'Mew-Deoxys' },
