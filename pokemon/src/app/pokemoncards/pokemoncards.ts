@@ -14,7 +14,7 @@ export class Pokemoncards {
     { name: 'Jirachi', image: '/PokemonBilder/Jirachi_Bild.png', audio: '/PokemonAudio/Jirachi_Audio.mp3', style: 'Jirachi'},
     { name: 'Deoxys', image: '/PokemonBilder/Deoxys/Deoxys_Bild.png', audio: '/PokemonAudio/Deoxys_Audio.mp3', style: 'Mew-Deoxys' },
     { name: 'Phione', image: '/PokemonBilder/Phione_Bild.png', audio: '/PokemonAudio/Phione_Audio.mp3', style: 'Phione-Manaphy' },
-    { name: 'Manaphy', image: '/PokemonBilder/Manaphy_Bild.png', audio: '/PokemonAudio/Manaphy_Audio.mp3', style: 'Phione-Manaphy' },
+    { name: 'Manaphy', image: '/PokemonBilder/Manaphy/Manaphy_Bild.png', audio: '/PokemonAudio/Manaphy_Audio.mp3', style: 'Phione-Manaphy' },
     { name: 'Darkrai', image: '/PokemonBilder/Darkrai_Bild.png', audio: '/PokemonAudio/Darkrai_Audio.mp3', style: 'Darkrai' },
     { name: 'Arceus', image: '/PokemonBilder/Arceus_Bild.png', audio: '/PokemonAudio/Arceus_Audio.mp3', style: 'Arceus' },
     { name: 'Victini', image: '/PokemonBilder/Victini_Bild.png', audio: '/PokemonAudio/Victini_Audio.mp3', style: 'Victini' },

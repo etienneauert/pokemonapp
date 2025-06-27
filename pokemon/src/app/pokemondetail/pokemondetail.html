@@ -1,60 +1,68 @@
 <div class="pokemon-detail-container">
-    @if (selectedPokemon) {
-        <div [class]="selectedPokemon.style" >
-            <button class="back-button" (click)="goBack()">← Zurück</button>
-            
-            <div class="pokemon-detail-content">
-                <div class="pokemon-image-section">
-                    <img [src]="selectedPokemon.image" [alt]="selectedPokemon.name" class="detail-pokemon-image">
-                    <button class="play-sound-button" (click)="playSound()">
-                        🔊 Sound abspielen
-                    </button>
-                </div>
-                
-                <div class="pokemon-info-section">
-                    <h1>{{ selectedPokemon.name }}</h1>
-                    
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-label">Typ:</span>
-                            <span class="info-value">{{ selectedPokemon.type || 'Unbekannt' }}</span>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-label">Pokédex-Nr.:</span>
-                            <span class="info-value">{{ selectedPokemon.pokedex || 'Unbekannt' }}</span>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-label">Farbe:</span>
-                            <span class="info-value">{{ selectedPokemon.color || 'Unbekannt' }}</span>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-label">Kategorie:</span>
-                            <span class="info-value">{{ selectedPokemon.category || 'Unbekannt' }}</span>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-label">Größe:</span>
-                            <span class="info-value">{{ selectedPokemon.size || 'Unbekannt' }}</span>
-                        </div>
-                        
-                        <div class="info-item">
-                            <span class="info-label">Gewicht:</span>
-                            <span class="info-value">{{ selectedPokemon.weight || 'Unbekannt' }}</span>
-                        </div>
-                    </div>
-                        <div class="pokemon-description">
-                            <p [innerHTML]="selectedPokemon.info || 'Keine weiteren Informationen verfügbar.'"></p>
-                        </div>
-                </div>
+  @if (selectedPokemon) {
+    <div [class]="selectedPokemon.style">
+      <button class="back-button" (click)="goBack()">← Zurück</button>
+      <div class="pokemon-detail-content two-column-layout">
+
+        <div class="left-column">
+          <div class="pokemon-header">
+            <h1>{{ selectedPokemon.name }}</h1>
+          </div>
+          <div class="pokemon-image-section">
+            <img [src]="currentFormImage || selectedPokemon.image" [alt]="selectedPokemon.name" class="detail-pokemon-image">
+            <button class="play-sound-button" (click)="playSound()">🔊 Sound abspielen</button>
+          </div>
+          <div *ngIf="selectedPokemon?.forms?.length > 1" class="pokemon-forms">
+            <span *ngFor="let form of selectedPokemon.forms">
+              <button (click)="selectForm(form)" [title]="form.name"
+                [ngClass]="{'active': currentFormImage === form.image}">
+                <img [src]="form.image" [alt]="form.name" width="48" height="48">
+                <div>{{form.name}}</div>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="pokemon-info-section">
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Typ:</span>
+                <span class="info-value">{{ selectedPokemon.type || 'Unbekannt' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Pokédex-Nr.:</span>
+                <span class="info-value">{{ selectedPokemon.pokedex || 'Unbekannt' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Farbe:</span>
+                <span class="info-value">{{ selectedPokemon.color || 'Unbekannt' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Kategorie:</span>
+                <span class="info-value">{{ selectedPokemon.category || 'Unbekannt' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Größe:</span>
+                <span class="info-value">{{ selectedPokemon.size || 'Unbekannt' }}</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Gewicht:</span>
+                <span class="info-value">{{ selectedPokemon.weight || 'Unbekannt' }}</span>
+              </div>
             </div>
+          </div>
         </div>
-    } @else {
-        <div class="error-message">
-            <h2>Pokemon nicht gefunden</h2>
-            <button class="back-button" (click)="goBack()">← Zurück zur Übersicht</button>
-        </div>
-    }
+
+      </div>
+      <div class="pokemon-description">
+        <p [innerHTML]="selectedPokemon.info || 'Keine weiteren Informationen verfügbar.'"></p>
+      </div>
+    </div>
+  } @else {
+    <div class="error-message">
+      <h2>Pokemon nicht gefunden</h2>
+      <button class="back-button" (click)="goBack()">← Zurück zur Übersicht</button>
+    </div>
+  }
 </div>
